@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+ int math_grade, phys_grade, chem_grade;
+ cout << "Enter a math grade 1 to 100: ";
+ cin >> math_grade;
+ cout << "Enter a Physics grade 1 to 100: ";
+ cin >> phys_grade;
+ cout << "Enter a Chemistry grade 1 to 100: ";
+ cin >> chem_grade;
+
+ double grade = (math_grade + phys_grade + chem_grade) / 3;
+ cout << "You're grade in percent is " << grade;
+
+ if (grade >= 90){
+    cout << "You have an A" << endl;
+ }
+ else if (grade >= 80 && grade <90){
+   cout << "You have a B" << endl;
+ }
+ else if (grade >= 70 && grade <80){
+    cout << "You have a C" << endl;
+ }
+ else if (grade >= 60 && grade < 70){
+    cout << "You have a D" << endl;
+ }
+ else {
+ cout << "You have an F" << endl;
+
+ }
+ if (math_grade <= 40 || phys_grade <= 40 || chem_grade <= 40) {
+    cout << "You Failed" << endl;
+
+ }
+ else{
+    cout << "You Passed" << endl;
+
+ }
+
+}
