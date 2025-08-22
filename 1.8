@@ -1,0 +1,49 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    cout << "enter a number" << endl;
+
+    int input;
+    cin >> input;
+
+    vector<int> range;
+    for (int i = 1; i <= input; i++)
+    {
+        range.push_back(i);
+    }
+
+    for (int &piece : range)
+    {
+        for (int &piece_1 : range)
+        {
+            if (piece_1 <= piece)
+            {
+                cout << piece_1;
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+
+        vector<int>::reverse_iterator rev;
+        for (rev = range.rbegin(); rev != range.rend(); rev++)
+        {
+            if (*rev <= piece)
+            {
+                cout << *rev;
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+
+        cout << endl;      
+    }
+
+    return 0;
+}
